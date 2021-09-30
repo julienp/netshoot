@@ -51,6 +51,12 @@ get_termshark() {
   esac
 }
 
+get_hey() {
+  LINK="https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64"
+  wget "$LINK" -O /tmp/hey && chmod +x /tmp/hey
+}
+
 get_ctop
 get_calicoctl
 get_termshark
+get_hey
